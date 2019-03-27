@@ -13,12 +13,12 @@ def read_mail_config():
 
 
 # send_pokemon sends a random pokemon to the list of subscribers.
-def send_pokemon(pokemon, image, users):
+def send_pokemon(pokemon, image, user):
     # Create the SMTP client that will send pokemail.
     conf_obj = read_mail_config()
 
     sender_email = conf_obj['email']
-    receiver_email = "luke.brady@ung.edu"
+    receiver_email = user
     password = conf_obj['password']
 
     message = MIMEMultipart("alternative")
