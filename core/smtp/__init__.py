@@ -22,7 +22,7 @@ def send_pokemon(pokemon, image, users):
     password = conf_obj['password']
 
     message = MIMEMultipart("alternative")
-    message["Subject"] = "multipart test"
+    message["Subject"] = "Something is rustling in the tall grass..."
     message["From"] = sender_email
     message["To"] = receiver_email
 
@@ -30,7 +30,7 @@ def send_pokemon(pokemon, image, users):
     html = """\
     <html>
       <body>
-        <h3>A wild {}{} has appeared.</h3>
+        <h3>A wild {}{} appeared!</h3>
         <img src = "{}"/>
       </body>
     </html>
