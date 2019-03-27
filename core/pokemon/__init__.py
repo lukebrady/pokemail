@@ -6,7 +6,7 @@ import random
 def read_poke_file():
     # The array that will be returned with the list of Pokemon.
     pokemon = []
-    with open('Configuration/pokemon_list.txt') as p:
+    with open('configuration/pokemon_list.txt') as p:
         for line in p:
             pokemon.append(line[:-1])
     return pokemon
