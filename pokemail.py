@@ -2,9 +2,12 @@
 
 from core import pokemon
 from core import smtp
+from core import  pokedb
 
 poke_arr = pokemon.read_poke_file()
-users = ['lbrad23105@gmail.com']
+
+users = pokedb.get_all_email()
+
 for user in users:
     p = pokemon.get_random_pokemon(pokemon_list=poke_arr)
     info = pokemon.get_pokemon_info(p)
