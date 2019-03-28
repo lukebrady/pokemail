@@ -3,12 +3,12 @@ import pymongo
 
 # create_poke_db creates the PokeDB in Mongo.
 def create_poke_db():
-    client = pymongo.MongoClient("mongodb://localhost:27017/")
+    client = pymongo.MongoClient("mongodb://0.0.0.0:27017/")
     db = client['pokedb']
     client.close()
 
 def insert_user_email(email):
-    client = pymongo.MongoClient("mongodb://localhost:27017/")
+    client = pymongo.MongoClient("mongodb://0.0.0.0:27017/")
     db = client['pokedb']
     users = db['email']
     # Insert the email object and close the client.
@@ -16,7 +16,7 @@ def insert_user_email(email):
     client.close()
 
 def get_all_email():
-    client = pymongo.MongoClient("mongodb://localhost:27017/")
+    client = pymongo.MongoClient("mongodb://0.0.0.0:27017/")
     db = client['pokedb']
     users = db['email']
     # Insert the email object and close the client.
