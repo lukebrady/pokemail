@@ -1,5 +1,6 @@
 import flask
 from flask import render_template, request
+from core import pokedb
 
 app = flask.Flask(__name__)
 
@@ -11,7 +12,7 @@ def pokemail_index():
 def pokemail_signup():
     form = request.form['email']
     # Create the object that will be submitted.
-    obj = {'Email':form}
+    pokedb.insert_user_email({'Email':form})
     return 'You are signed up for Pokemail! Check your email everyday to see what Pokemon you have discovered.'
 
 
